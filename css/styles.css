@@ -991,4 +991,39 @@ body {
     margin-left: 1rem;
     padding-left: 1.5rem;
   }
+
+}
+
+/* -------- 手机与平板响应式调整 -------- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .container, .grid {
+        display: grid;
+        grid-template-columns: 1fr; /* 一列 */
+        gap: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 如果有文字和图片并排的区域，可以强制堆叠 */
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
 }
