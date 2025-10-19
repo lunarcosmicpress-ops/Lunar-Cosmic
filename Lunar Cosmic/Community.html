@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunarcosmic Community — Observation Records</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/community.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER (same as home) -->
+    <header class="header">
+        <div class="brand">
+            <img src="images/logo.png" alt="Lunarcosmic Logo" class="logo-img">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="community.html" class="active">Community</a>
+            <a href="store.html">Store</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- INTRO -->
+    <section class="community-hero">
+        <h1>Observation Records</h1>
+        <p>Collected reflections, thoughts, and cosmic observations from our readers and collaborators.</p>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="community-feed" id="feed">
+        <!-- JS will inject posts here -->
+    </section>
+
+    <!-- ADD OBSERVATION BUTTON -->
+    <div class="add-observation">
+        <button id="openFormBtn">+ Add Observation Record</button>
+    </div>
+
+    <!-- POPUP FORM -->
+    <div id="observationForm" class="form-overlay">
+        <div class="form-box">
+            <h2>New Observation Record</h2>
+            <form id="recordForm">
+                <label for="author">Your Name</label>
+                <input type="text" id="author" placeholder="Enter name or alias" required>
+
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Short title (e.g. Field Record — No.11)" required>
+
+                <label for="content">Observation</label>
+                <textarea id="content" rows="5" placeholder="Write your observation here..." required></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitRecord">Submit</button>
+                    <button type="button" id="closeFormBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- LOAD BUTTON -->
+    <div class="load-more">
+        <button id="loadMoreBtn">Load More Records</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p>© Lunarcosmic 2025 — Independent Publishing</p>
+            <p>Email: lunarcosmic.press@gmail.com</p>
+            <p>Instagram: @lunar.cosmic</p>
+        </div>
+        <div class="footer-right">
+            <p>Based in Earth Orbit</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
