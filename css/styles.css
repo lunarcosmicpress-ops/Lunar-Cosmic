@@ -1063,5 +1063,44 @@ body {
         min-width: 120px;
     }
 }
-s
+/* ======== 📱 手机端排版修复强力版 ======== */
+@media (max-width: 768px) {
+  .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 90% !important;
+    margin: 20px auto !important;
+  }
+
+  .product-card img {
+    width: 80% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+    border-radius: 10px;
+  }
+
+  .product-info {
+    width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .product-actions {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .product-actions button {
+    width: auto !important;
+    min-width: 120px !important;
+    padding: 10px 16px !important;
+  }
+}
+
+
 
