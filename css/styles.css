@@ -1101,6 +1101,110 @@ body {
     padding: 10px 16px !important;
   }
 }
+/* ========= 📱 Store Product Card 手机端修复 ========= */
+@media (max-width: 768px) {
+  .product-gallery {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    padding: 1rem !important;
+  }
+
+  .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 90% !important;
+    max-width: 400px !important;
+    background: rgba(25, 25, 25, 0.7);
+    border: 1px solid rgba(220, 200, 120, 0.3);
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.05);
+    padding: 1.5rem !important;
+    text-align: center;
+  }
+
+  .product-images {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 1rem;
+  }
+
+  .product-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .slide-controls {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+
+  .slide-controls button {
+    background: rgba(0, 0, 0, 0.4);
+    color: #d4af37;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #f4e7b3;
+  }
+
+  .product-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #d8d8d8;
+  }
+
+  .detail-link {
+    display: inline-block;
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .product-actions button {
+    border: 1px solid #d4af37;
+    background: transparent;
+    color: #d4af37;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .product-actions button:hover {
+    background: #d4af37;
+    color: #111;
+  }
+}
+
 
 
 
