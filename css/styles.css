@@ -1204,6 +1204,42 @@ body {
     color: #111;
   }
 }
+  /* === Fine-tune vertical spacing === */
+  .product-card {
+    padding: 1rem !important;
+  }
+
+  .product-images {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .product-info h2 {
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.3rem !important;
+    line-height: 1.2;
+  }
+
+  .product-info p {
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .slide-controls {
+    bottom: 0;
+    top: auto !important;
+    transform: translateY(50%);
+  }
+
+  /* Optional: slightly reduce the card width so content feels centered */
+  .product-gallery {
+    gap: 1.5rem !important;
+  }
+
+  /* Reduce space below detail link */
+  .detail-link {
+    margin-bottom: 0.5rem !important;
+  }
+
 
 
 
