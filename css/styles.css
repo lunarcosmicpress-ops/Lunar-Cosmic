@@ -1263,37 +1263,40 @@ body {
   object-position: center;
 }
 
-/* 调整箭头按钮（保证不会被挤下去） */
+/* ===== 修正箭头贴左右居中 ===== */
 .slide-controls {
   position: absolute;
-  bottom: 50%;
+  top: 50%;
   left: 0;
   right: 0;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 0 0.5rem;
-  pointer-events: none; /* 不影响布局 */
+  pointer-events: none; /* 不挡住图片点击 */
 }
 
 .slide-controls button {
-  pointer-events: all; /* 让按钮可以点击 */
-  background: rgba(0, 0, 0, 0.5);
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.4);
   color: #f1e9d2;
   border: 1px solid #f1e9d2;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
-  cursor: pointer;
   font-size: 1.2rem;
-  line-height: 1rem;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
 }
 
 .slide-controls button:hover {
   background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
 }
 
 /* 手机端下让比例不变，只是缩小间距 */
@@ -1303,6 +1306,7 @@ body {
     margin: 0 auto 2rem;
   }
 }
+
 
 
 
