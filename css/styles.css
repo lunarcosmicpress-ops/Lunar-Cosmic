@@ -1256,12 +1256,28 @@ body {
 }
 
 /* 图片自动填满框但保持比例，超出则裁切 */
+.product-images {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5; /* 固定为4:5比例，可改成1/1或3/4 */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #111;
+}
+
 .product-images img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* 这行实现“裁切” */
+  object-fit: cover; /* 自动裁切，不变形 */
   object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
 }
+
+.product-images img:hover {
+  transform: scale(1.03); /* 微微放大，增加质感 */
+}
+
 
 /* ===== 修正箭头贴左右居中 ===== */
 .slide-controls {
@@ -1302,6 +1318,7 @@ body {
     margin: 0 auto 2rem;
   }
 }
+
 
 
 
