@@ -1256,30 +1256,6 @@ body {
 }
 
 /* 图片自动填满框但保持比例，超出则裁切 */
-.product-images {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-  background-color: #111;
-}
-
-.product-images img {
-  width: 100%;
-  height: 100%;
-  max-height: 380px; /* 限制桌面端最大高度 */
-  object-fit: contain; /* 保留比例，不裁切 */
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-
-.product-images img:hover {
-  transform: scale(1.02);
-}
 
 /* 箭头恢复在图片两侧 */
 .slide-controls {
@@ -1311,25 +1287,6 @@ body {
 }
 
 
-.product-images img:hover {
-  transform: scale(1.03); /* 微微放大，增加质感 */
-}
-@media (max-width: 768px) {
-  .product-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .product-images {
-    aspect-ratio: 3 / 4;
-    width: 80%;
-  }
-
-  .product-info {
-    margin-top: 1rem;
-  }
-}
 
 
 /* ===== 修正箭头贴左右居中 ===== */
@@ -1373,30 +1330,7 @@ body {
 }
 
 /* 🖥 桌面端图片大小限制 */
-@media (min-width: 1024px) {
-  .product-images img {
-    max-height: 400px;      /* 最大高度400px，可按你喜好修改 */
-    width: auto;            /* 保留比例 */
-    height: auto;
-  }
-}
 
-/* 🪐 Product Card Image Fix */
-.product-images {
-  position: relative;
-  width: 100%;
-  height: 300px;             /* 统一所有产品图片区域高度 */
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.product-images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* 自动裁切填满，保持比例 */
-  object-position: center;
-  display: block;
-}
 
 /* 调整箭头按钮位置 */
 .slide-controls {
@@ -1431,6 +1365,7 @@ body {
     height: 220px;
   }
 }
+
 
 
 
