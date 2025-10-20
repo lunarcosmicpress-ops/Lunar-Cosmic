@@ -1240,6 +1240,70 @@ body {
     margin-bottom: 0.5rem !important;
   }
 
+/* =====统一商品图片区比例 + 修正箭头定位===== */
+
+/* 固定图片区比例（4:5，可改成1:1看你喜欢） */
+.product-images {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;  /* 可改成 1 / 1 或 3 / 4 */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #222; /* 避免图片空白时出现背景 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 图片自动填满框但保持比例，超出则裁切 */
+.product-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 这行实现“裁切” */
+  object-position: center;
+}
+
+/* 调整箭头按钮（保证不会被挤下去） */
+.slide-controls {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  pointer-events: none; /* 不影响布局 */
+}
+
+.slide-controls button {
+  pointer-events: all; /* 让按钮可以点击 */
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1e9d2;
+  border: 1px solid #f1e9d2;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-controls button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 手机端下让比例不变，只是缩小间距 */
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%;
+    margin: 0 auto 2rem;
+  }
+}
+
 
 
 
