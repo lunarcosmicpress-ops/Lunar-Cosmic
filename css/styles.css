@@ -1371,6 +1371,15 @@ body {
   }
 }
 
+/* 🖥 桌面端图片大小限制 */
+@media (min-width: 1024px) {
+  .product-images img {
+    max-height: 400px;      /* 最大高度400px，可按你喜好修改 */
+    width: auto;            /* 保留比例 */
+    height: auto;
+  }
+}
+
 
 
 
